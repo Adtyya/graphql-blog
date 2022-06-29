@@ -45,7 +45,7 @@ export const NavigationBar = () => {
     setList(navList);
     togler.addEventListener("click", navResponsive);
     window.addEventListener("scroll", navScroll);
-  }, []);
+  }, [navList]);
   return (
     <nav
       className={`fixed top-0 z-30 w-full bg-white ${
