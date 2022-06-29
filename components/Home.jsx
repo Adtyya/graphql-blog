@@ -28,6 +28,9 @@ export const HomePage = ({ posts }) => {
           </div>
         </div>
       </div>
+      <h1 className="text-center pt-4 font-cs-alegra text-4xl text-black">
+        Postingan terbaru
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 w-full content-center px-3 h-auto py-5">
         {posts.map((el, i) => (
           <Link href={`read/${el.slug}`} key={i}>

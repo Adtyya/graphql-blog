@@ -16,12 +16,12 @@ module.exports = {
       keyframes: {
         blob: {
           "0%, 100%": { transform: "translate(0px, 0px) scale(1)" },
-          "33%": { transform: "translate(30px, 50px) scale(1.2)" },
+          "33%": { transform: "translate(-30px, 50px) scale(1.2)" },
           "66%": { transform: "translate(20px, 10px) scale(0.7)" },
         },
         blob2: {
           "0%, 100%": { transform: "translate(0px, 0px) scale(1)" },
-          "33%": { transform: "translate(-10px, -40px) scale(1.3)" },
+          "33%": { transform: "translate(-10px, -50px) scale(1.3)" },
           "66%": { transform: "translate(10px, 25px) scale(0.9)" },
         },
       },

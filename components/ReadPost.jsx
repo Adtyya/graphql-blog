@@ -17,14 +17,19 @@ const ReadPost = ({ post }) => {
       <div className="p-2 flex flex-col w-full h-auto justify-start items-start space-y-3">
         <h1 className="text-black text-4xl font-semibold">{post?.title}</h1>
         <div className="text-lg text-black font-normal inline-block">
-          <Link href={"/"}>Home </Link>
-          &gt;
-          <span> {post?.title}</span>
+          <Link href={"/"}>Home </Link> \ <span> {post?.title}</span>
         </div>
-        {/* <span>Penulis artikel - {post?.author.name}</span> */}
         <h5 className="text-md py-2">
           {formatDate(post?.createdAt)}, oleh {post?.author.name}
         </h5>
+        <div className="flex space-x-1 pt-1">
+          <h3 className="text-lg text-black font-semibold">Kategori</h3>
+          <Link href={`/kategori/${post?.tags}`}>
+            <h3 className="text-lg text-white bg-blue-300 rounded px-2 cursor-pointer font-semibold">
+              {post?.tags}
+            </h3>
+          </Link>
+        </div>
         <div className="w-full text-md pt-2 pb-5 space-y-2">
           <ReactMarkdown>{post?.content.markdown}</ReactMarkdown>
         </div>
