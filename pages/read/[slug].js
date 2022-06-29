@@ -1,0 +1,28 @@
+import React from "react";
+import { HeadlessCms, queryAllSlug, getBySlg } from "../../lib/api";
+import ReadPost from "../../components/ReadPost";
+
+const DetailPost = ({ post }) => {
+  return (
+    <div>
+      <ReadPost post={post} />
+    </div>
+  );
+};
+
+export default DetailPost;
+
+export async function getStaticPaths() {
+  const { posts } = await HeadlessCms.request(queryAllSlug);
+  const paths = posts.map((path) => ({ params: { slug: path.slug } }));
+  return { paths, fallback: false };
+}
+export async function getStaticProps({ params }) {
+  const slug = params.slug;
+  const { post } = await HeadlessCms.request(getBySlg, { slug });
+  return {
+    props: {
+      post,
+    },
+  };
+}
