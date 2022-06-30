@@ -65,8 +65,12 @@ export const NavigationBar = () => {
           </h1>
         </Link>
         <ul className={myStyle}>
-          <li className="block lg:inline-block">Read</li>
-          <li className="block lg:inline-block">About</li>
+          <Link href={"/"}>
+            <li className="block cursor-pointer lg:inline-block">Read</li>
+          </Link>
+          <Link href={"/about"}>
+            <li className="block cursor-pointer lg:inline-block">About</li>
+          </Link>
         </ul>
       </div>
     </nav>
