@@ -19,9 +19,6 @@ const ReadPost = ({ post }) => {
         <div className="text-lg text-black font-semibold inline-block">
           <Link href={"/"}>Home </Link> &gt; <span> {post?.title}</span>
         </div>
-        <h5 className="text-md py-2">
-          {formatDate(post?.createdAt)}, oleh {post?.author.name}
-        </h5>
         <div className="flex space-x-1 pt-1">
           <h3 className="text-lg text-black font-semibold">Kategori</h3>
           <Link href={`/kategori/${post?.category.category}`}>
@@ -33,6 +30,9 @@ const ReadPost = ({ post }) => {
         <div className="w-full text-md pt-2 pb-5 space-y-2">
           <ReactMarkdown>{post?.content.markdown}</ReactMarkdown>
         </div>
+        <h5 className="text-md py-2">
+          {formatDate(post?.createdAt)}, oleh {post?.author.name}
+        </h5>
       </div>
     </Layout>
   );
