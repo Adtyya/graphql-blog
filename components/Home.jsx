@@ -3,7 +3,7 @@ import { Layout } from "./Layout";
 import { Card } from "./card/Card";
 import Link from "next/link";
 
-export const HomePage = ({ posts }) => {
+export const HomePage = ({ posts, categories }) => {
   return (
     <Layout>
       <div className="flex flex-col w-full h-[50vh] items-center bg-gray-100 rounded">
@@ -31,6 +31,13 @@ export const HomePage = ({ posts }) => {
       <h1 className="text-center pt-4 font-cs-alegra text-4xl text-black">
         Postingan terbaru
       </h1>
+      <div className="px-4 py-3 w-full lg:w-[35%] block mx-auto bg-gray-100 rounded mt-5 mb-2 shadow-md overflow-auto whitespace-nowrap">
+        {categories.map((el, i) => (
+          <p className="inline-block text-md text-black mx-3" key={i}>
+            {el.category}
+          </p>
+        ))}
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 w-full content-center px-3 h-auto py-5">
         {posts.map((el, i) => (
           <Link href={`read/${el.slug}`} key={i}>
