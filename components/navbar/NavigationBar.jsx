@@ -7,7 +7,7 @@ export const NavigationBar = () => {
   const [shadow, setShadow] = useState(false);
   const [list, setList] = useState("");
 
-  const myStyle = `nav-list text-black pl-1 max-h-0 lg:max-h-full lg:visible mt-2 lg:mt-0 lg:space-x-3 overflow-hidden lg:overflow-visible transition-all duration-300 ${
+  const myStyle = `nav-list text-black pl-1 max-h-0 lg:max-h-full lg:visible mt-1 lg:mt-0 lg:space-x-3 overflow-hidden lg:overflow-visible transition-all duration-500 ${
     visible ? "visible" : "invisible"
   }`;
 
@@ -26,7 +26,7 @@ export const NavigationBar = () => {
       navList.removeAttribute("style");
     } else {
       setVisible(true);
-      navList.style.maxHeight = navList.scrollHeight + "px";
+      navList.style.maxHeight = navList.scrollHeight * 2 + "px";
     }
   };
 
@@ -66,10 +66,20 @@ export const NavigationBar = () => {
         </Link>
         <ul className={myStyle}>
           <Link href={"/"}>
-            <li className="block cursor-pointer lg:inline-block">Read</li>
+            <li
+              onClick={closeNav}
+              className="block cursor-pointer lg:inline-block mt-3 lg:mt-0"
+            >
+              Read
+            </li>
           </Link>
           <Link href={"/about"}>
-            <li className="block cursor-pointer lg:inline-block">About</li>
+            <li
+              onClick={closeNav}
+              className="block cursor-pointer lg:inline-block"
+            >
+              About
+            </li>
           </Link>
         </ul>
       </div>

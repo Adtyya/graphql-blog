@@ -28,8 +28,12 @@ export const CategoryPage = ({ posts, category }) => {
       {/* <h1 className="text-center pt-4 font-cs-alegra text-4xl text-black">
         Kategori - {category}
       </h1> */}
+      <div className="text-lg text-black font-semibold my-2 inline-block">
+        <Link href={"/"}>Home </Link> &gt; <span>Kategori</span> &gt;
+        <span> {category}</span>
+      </div>
       {posts.length === 0 ? (
-        <h1 className="text-center pt-12 text-4xl text-black">
+        <h1 className="text-center pt-12 text-2xl lg:text-4xl text-black">
           Belum ada postingan cuy, 🥺
         </h1>
       ) : (

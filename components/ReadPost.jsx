@@ -16,8 +16,8 @@ const ReadPost = ({ post }) => {
       </div>
       <div className="p-2 flex flex-col w-full h-auto justify-start items-start space-y-3">
         <h1 className="text-black text-4xl font-semibold">{post?.title}</h1>
-        <div className="text-lg text-black font-normal inline-block">
-          <Link href={"/"}>Home </Link> / <span> {post?.title}</span>
+        <div className="text-lg text-black font-semibold inline-block">
+          <Link href={"/"}>Home </Link> &gt; <span> {post?.title}</span>
         </div>
         <h5 className="text-md py-2">
           {formatDate(post?.createdAt)}, oleh {post?.author.name}
