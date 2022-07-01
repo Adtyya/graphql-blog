@@ -7,10 +7,10 @@ const MarkDown = ({ children }) => {
       <ReactMarkdown
         components={{
           h1: ({ node, ...props }) => (
-            <h1 className="text-3xl font-normal mt-1" {...props} />
+            <h1 className="text-2xl lg:text-3xl font-normal mt-1" {...props} />
           ),
           h2: ({ node, ...props }) => (
-            <h1 className="text-3xl font-normal mt-1" {...props} />
+            <h1 className="text-2xl lg:text-3xl font-normal mt-1" {...props} />
           ),
           h3: ({ node, ...props }) => (
             <h1 className="text-2xl font-normal mt-1" {...props} />

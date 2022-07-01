@@ -6,7 +6,7 @@ import Link from "next/link";
 export const CategoryPage = ({ posts, category }) => {
   return (
     <Layout>
-      <div className="font-cs-sans text-lg text-black p-2 font-semibold my-2 inline-block">
+      <div className="font-cs-sans text-md lg:text-lg text-black p-2 font-semibold my-2 inline-block">
         <Link href={"/"}>Home </Link> &gt;{" "}
         <Link href={"/#categories"}>Kategori</Link> &gt;
         <span> {category}</span>
