@@ -19,7 +19,10 @@ const MarkDown = ({ children }) => {
             <h1 className="text-2xl font-normal mt-1" {...props} />
           ),
           p: ({ node, ...props }) => (
-            <p className="text-md font-normal py-3" {...props} />
+            <p
+              className="text-md lg:text-lg text-red-100 font-normal py-3"
+              {...props}
+            />
           ),
         }}
       >
