@@ -28,7 +28,7 @@ const ReadPost = ({ post }) => {
           </Link>
         </div>
         <div className="w-full text-md pt-2 pb-5 space-y-2">
-          <MarkDown children={post?.content.markdown} />
+          <MarkDown>{post?.content.markdown}</MarkDown>
         </div>
         <h5 className="text-md pb-4">
           {formatDate(post?.createdAt)}, oleh {post?.author.name}

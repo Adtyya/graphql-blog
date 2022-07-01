@@ -2,6 +2,7 @@ import React from "react";
 import { Layout } from "./Layout";
 import { Card } from "./card/Card";
 import Link from "next/link";
+import LazyLoad from "react-lazyload";
 
 export const HomePage = ({ posts, categories }) => {
   return (
@@ -40,6 +41,7 @@ export const HomePage = ({ posts, categories }) => {
           </Link>
         ))}
       </div>
+      <div className="h-screen w-full"></div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 w-full content-center px-3 h-auto py-5">
         {posts.map((el, i) => (
           <Link href={`/read/${el.slug}`} key={i}>
