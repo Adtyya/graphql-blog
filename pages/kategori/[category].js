@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { queryByCategory, queryCategories, HeadlessCms } from "../../lib/api";
 import { CategoryPage } from "../../components/Category";
 import { useRouter } from "next/router";
+import Header from "../../components/Header";
 
 const DetailPost = ({ posts }) => {
   const router = useRouter();
@@ -12,6 +13,7 @@ const DetailPost = ({ posts }) => {
   }, [router.isReady]);
   return (
     <div>
+      <Header title={`Kategori - ${category}`} />
       <CategoryPage posts={posts} category={category} />
     </div>
   );

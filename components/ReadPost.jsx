@@ -2,7 +2,7 @@ import React from "react";
 import { Layout } from "./Layout";
 import Link from "next/link";
 import formatDate from "../lib/dateFormatter";
-import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import MarkDown from "./MarkDown";
 
 const ReadPost = ({ post }) => {
   return (
@@ -28,9 +28,9 @@ const ReadPost = ({ post }) => {
           </Link>
         </div>
         <div className="w-full text-md pt-2 pb-5 space-y-2">
-          <ReactMarkdown>{post?.content.markdown}</ReactMarkdown>
+          <MarkDown children={post?.content.markdown} />
         </div>
-        <h5 className="text-md py-2">
+        <h5 className="text-md pb-4">
           {formatDate(post?.createdAt)}, oleh {post?.author.name}
         </h5>
       </div>
