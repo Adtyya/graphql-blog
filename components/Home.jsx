@@ -32,7 +32,10 @@ export const HomePage = ({ posts, categories }) => {
       <h1 className="text-center pt-4 font-cs-alegra text-4xl text-black">
         Postingan terbaru
       </h1>
-      <div className="px-4 py-3 w-full lg:w-[35%] block mx-auto bg-gray-100 rounded mt-5 mb-2 shadow-md overflow-auto whitespace-nowrap">
+      <div
+        id="categories"
+        className="px-4 py-3 w-full lg:w-[35%] block mx-auto bg-gray-100 rounded mt-5 mb-2 shadow-md overflow-auto whitespace-nowrap"
+      >
         {categories.map((el, i) => (
           <Link href={`/kategori/${el.category}`} key={i}>
             <p className="inline-block text-md text-black mx-3 cursor-pointer">

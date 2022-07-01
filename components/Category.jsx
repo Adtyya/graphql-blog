@@ -6,6 +6,11 @@ import Link from "next/link";
 export const CategoryPage = ({ posts, category }) => {
   return (
     <Layout>
+      <div className="font-cs-sans text-lg text-black p-2 font-semibold my-2 inline-block">
+        <Link href={"/"}>Home </Link> &gt;{" "}
+        <Link href={"/#categories"}>Kategori</Link> &gt;
+        <span> {category}</span>
+      </div>
       <div className="flex flex-col w-full h-[50vh] items-center bg-gray-100 rounded">
         <div className="relative w-full max-w-xl h-full flex flex-col items-center justify-center">
           <div className="buble__1 opacity-75 absolute bottom-[15%] right-[30%] -z-1 w-36 h-36 bg-cyan-200 rounded-full filter blur-xl animate-blob2"></div>
@@ -28,10 +33,6 @@ export const CategoryPage = ({ posts, category }) => {
       {/* <h1 className="text-center pt-4 font-cs-alegra text-4xl text-black">
         Kategori - {category}
       </h1> */}
-      <div className="text-lg text-black p-2 font-semibold my-2 inline-block">
-        <Link href={"/"}>Home </Link> &gt; <span>Kategori</span> &gt;
-        <span> {category}</span>
-      </div>
       {posts.length === 0 ? (
         <h1 className="text-center pt-12 text-2xl lg:text-4xl text-black">
           Belum ada postingan cuy, 🥺

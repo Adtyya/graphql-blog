@@ -4,8 +4,8 @@ import LazyLoad from "react-lazyload";
 
 export const Card = ({ img, imgAlt, title, author, date }) => {
   return (
-    <LazyLoad height={500}>
-      <div className="relative overflow-hidden shadow-xl w-full h-auto cursor-pointer rounded group">
+    <LazyLoad height={100}>
+      <div className="font-cs-sans relative overflow-hidden shadow-xl w-full h-auto cursor-pointer rounded group">
         <img
           src={img}
           alt={imgAlt}

@@ -9,7 +9,7 @@ module.exports = {
       animation: {
         blob: "blob 4s infinite",
         blob2: "blob2 5s infinite",
-        blob3: "blob3 3s infinite",
+        blob3: "blob3 5s infinite",
       },
       keyframes: {
         blob: {
